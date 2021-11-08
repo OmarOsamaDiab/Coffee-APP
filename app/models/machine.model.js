@@ -20,7 +20,7 @@ const CoffeeMachineModel = new mongoose.model(
 
 const createMachine = async coffeeMachineData => {
     const coffeeMachine = new CoffeeMachineModel(coffeeMachineData);
-    coffeeMachine.save();
+    await coffeeMachine.save();
 };
 
 const listMachines = async query => CoffeeMachineModel.find(query)
